@@ -39,7 +39,7 @@
 		<td width = "250">措咯扁埃</td>
 		<td width = "250">
 						<select name = "rentDuration" id = "selectOption">
-							<option value = "1" size = "5">1老</option>
+							<option value = "1">1老</option>
 							<option value = "2">2老</option>
 							<option value = "3">3老</option>
 							<option value = "4">4老</option>

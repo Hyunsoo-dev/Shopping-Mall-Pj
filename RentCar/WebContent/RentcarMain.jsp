@@ -9,7 +9,7 @@
 	table{
 		text-align : center;
 		
-		height : 100%;
+		height : 80%;
 		margin : auto;
 	}
 </style>

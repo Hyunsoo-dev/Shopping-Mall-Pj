@@ -12,7 +12,7 @@ import javax.sql.DataSource;
 
 public class RentcarDAO {
 	
-	Connection con;
+	Connection con;	
 	PreparedStatement pstmt;
 	ResultSet rs;
 	
@@ -221,6 +221,38 @@ Vector<CarListBean> v = new Vector<CarListBean>();
 		}
 		
 		return result;
+	}
+	
+	
+	//차량 예약하기를 눌렀을 때 DB에 데이터들을 저장하는 메소드
+	public void setReserve(CarReserveBean rbean) {
+		
+		getCon();
+		
+		
+		try {
+			
+			
+			String sql = "insert into carreserve values(reserve_seq.nextval,?,?,?,?,?,?,?,?,?)";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1,rbean.getNo());
+			pstmt.setString(2, rbean.getId());
+			pstmt.setInt(3, rbean.getQuantity());
+			pstmt.setInt(4, rbean.getRentDuration());
+			pstmt.setString(5, rbean.getRentDate());
+			pstmt.setInt(6, rbean.getInsurance());
+			pstmt.setInt(7, rbean.getWifi());
+			pstmt.setInt(8, rbean.getNavigation());
+			pstmt.setInt(9, rbean.getBabySheet());
+			
+			pstmt.executeUpdate();
+			
+			con.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
 	}
 }
  

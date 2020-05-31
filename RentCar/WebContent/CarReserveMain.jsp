@@ -11,6 +11,8 @@
 <style>
 	table{
 		text-align : center;
+		height : 80%;
+		margin : auto;
 	}
 </style>
 </head>

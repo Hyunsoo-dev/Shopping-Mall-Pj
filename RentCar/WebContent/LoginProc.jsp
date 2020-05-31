@@ -28,6 +28,7 @@
 			history.go(-1);
 		</script>
 <%		
+	//로그인 성공 시 
 	}else{
 		session.setAttribute("id", id);
 		response.sendRedirect("RentcarMain.jsp");
