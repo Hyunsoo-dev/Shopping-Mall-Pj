@@ -8,9 +8,9 @@
 </head>
 <body>
 	<table width = "1000">
-		<tr height = "500">
+		<tr height = "450">
 			<td align = "center">
-				<img src = "img/amazoncarMain.png" width = "800" hegiht = "500">
+				<img src = "img/amazoncarMain.png" width = "800" hegiht = "450">
 			</td>
 		</tr>
 	</table>

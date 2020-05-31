@@ -10,7 +10,7 @@
 	<table width = "1000">
 		<tr height = "100">
 			<td align = "center">
-			<hr color = "red" size = "3">
+			<hr color = "powderblue" size = "3">
 				이용약관 
 				이메일 무단수집거부 
 				개인정보 취급(처리)방침

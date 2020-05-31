@@ -200,5 +200,27 @@ Vector<CarListBean> v = new Vector<CarListBean>();
 		}
 		return bean;
 	}
+	
+	//회원 정보를 확인하는 로그인 메소드
+	public int getLogin(String id, String pass) {
+		
+		int result = 0;
+		getCon();
+		try {
+			
+			String sql = "select count(*) from member where id = ? and pass1 = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, id);
+			pstmt.setString(2, pass);
+			
+			result = pstmt.executeUpdate();
+			
+			con.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
 }
  

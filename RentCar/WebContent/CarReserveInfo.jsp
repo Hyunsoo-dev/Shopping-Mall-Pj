@@ -69,7 +69,8 @@
 		</tr>
 		<tr>
 			<td colspan = "2" align = "center">
-				<input type = "hidden" name = "no" value = "<%= bean.getNo() %>">
+				<input type = "hidden" name = "img" value = "<%= bean.getImg() %>"><!-- 이전 차랑 이미지 -->
+				<input type = "hidden" name = "no" value = "<%= bean.getNo() %>"><!-- 이전 차랑 정보 -->
 				<input type = "submit" value = "옵션 선택 후 구입">
 			</td>
 		</tr>

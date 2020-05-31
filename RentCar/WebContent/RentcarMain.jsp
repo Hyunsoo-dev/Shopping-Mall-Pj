@@ -8,6 +8,9 @@
 <style>
 	table{
 		text-align : center;
+		
+		height : 100%;
+		margin : auto;
 	}
 </style>
 </head>
@@ -30,7 +33,7 @@
 			<td><jsp:include page="Top.jsp" /></td>
 		</tr>
 		<!--  center page 부분 -->
-		<tr>
+		<tr height = "450">
 			<td><jsp:include page= "<%= center %>" /></td>
 		</tr>
 		<!--  Bottom page 부분 -->

@@ -12,7 +12,7 @@
 	.top_menu {
 	
 		
-		background-color:red;
+		background-color:powderblue;
 		font-size: 100%;
 		text-align: center;
 		
@@ -51,7 +51,23 @@
 					<img src = "img/amazoncar.png">
 				</a>
 			</td>
-			<td width = "200" align = "center"> <%= id  %> 님 반갑습니다.</td>			
+			<td width = "200" align = "center"> 
+			<%= id  %>님
+			<% 
+				//GUEST 로 로그인된 경우 --> 로그인 버튼 생성함.
+				if(id.equals("GUEST")){ 
+			
+			%>	
+					<button onclick = "location.href='RentcarMain.jsp?center=Login.jsp'">로그인</button>
+			<%
+				}else{
+			%>
+					<button onclick = "location.href='RentcarMain.jsp?center=Logout.jsp'">로그아웃</button>			
+			<%
+					
+				}
+			%>
+			</td>			
 		</tr>
 		<tr height = "50">
 			<td class = "top_menu" width = "200" ><a href = "RentcarMain.jsp?center=CarReserveMain.jsp">예 약 하 기</a></td>
