@@ -59,28 +59,28 @@
 	<tr height = "60">
 		<td width = "250">보험 적용</td>
 		<td width = "250"><select name = "insurance" id = "selectOption">
-							<option value = "1">적용(1일 1만원)</option>
+							<option value = "1" selected>적용(1일 1만원)</option>
 							<option value = "2">미적용</option>
 						  </select>
 	</tr>
 	<tr height = "60">
 		<td width = "250">Wifi 적용</td>
-		<td width = "250"><select name = "Wifi"  id = "selectOption">
-							<option value = "1">적용(1일 1만원)</option>
+		<td width = "250"><select name = "wifi" id = "selectOption">
+							<option value = "1" selected>적용(1일 1만원)</option>
 							<option value = "2">미적용</option>
 						  </select>
 	</tr>
 	<tr height = "60">
 		<td width = "250" >내비게이션 적용</td>
-		<td width = "250"><select name = "Navigation" id = "selectOption">
-							<option value = "1">적용(무료)</option>
+		<td width = "250"><select name = "navigation" id = "selectOption">
+							<option value = "1" selected>적용(무료)</option>
 							<option value = "2">미적용</option>
 						  </select>
 	</tr>
 	<tr height = "60">
 		<td width = "250">베이비시트 적용</td>
-		<td width = "250"><select name = "BabySheet"  id = "selectOption">
-							<option value = "1">적용(1일 1만원)</option>
+		<td width = "250"><select name = "babySheet" id = "selectOption">
+							<option value = "1" selected>적용(1일 1만원)</option>
 							<option value = "2">미적용</option>
 						  </select>
 	</tr>

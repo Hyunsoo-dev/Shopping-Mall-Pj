@@ -252,7 +252,51 @@ Vector<CarListBean> v = new Vector<CarListBean>();
 			e.printStackTrace();
 		}
 		
+	
+	}
+	
+	public Vector<CarViewBean> getAllview(String id){
+		Vector<CarViewBean> v = new Vector<CarViewBean>();
+		CarViewBean cbean = null;
 		
+		getCon();
+		
+		try {
+			
+			String sql =  "select a2.img,  a2.name, a1.quantity , a2.price , a1.rentduration , a1.rentdate, a2.usepeople, a1.insurance, a1.Wifi, a1.Navigation, a1.BabySheet, a2.company"
+						+ " from carreserve a1 , rentcar a2 "
+						+ "where sysdate < to_date(rentdate , 'yyyy-MM-dd') and a1.no = a2.no and id = ?";
+			
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, id);
+			
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				cbean = new CarViewBean();
+				cbean.setImg(rs.getString(1));
+				cbean.setName(rs.getString(2));
+				cbean.setQuantity(rs.getInt(3));
+				cbean.setPrice(rs.getInt(4));
+				cbean.setRentDuration(rs.getInt(5));
+				cbean.setRentDate(rs.getString(6));
+				cbean.setUsePeople(rs.getInt(7));
+				cbean.setInsurance(rs.getInt(8));
+				cbean.setWifi(rs.getInt(9));
+				cbean.setNavigation(rs.getInt(10));
+				cbean.setBabySheet(rs.getInt(11));
+				cbean.setCompany(rs.getString(12));
+				
+				v.add(cbean);
+				
+			}
+			con.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	
+		
+		return v;
 	}
 }
  

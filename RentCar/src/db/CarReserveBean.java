@@ -9,11 +9,9 @@ public class CarReserveBean {
 	private int rentDuration;
 	private String rentDate;//date 타입으로 받았을경우 데이터가 안들어감.
 	private int insurance;
-	private int Wifi;
-	private int Navigation;
-	private int BabySheet;
-	
-	
+	private int wifi;
+	private int navigation;
+	private int babySheet;
 	public int getReserveNo() {
 		return reserveNo;
 	}
@@ -57,23 +55,25 @@ public class CarReserveBean {
 		this.insurance = insurance;
 	}
 	public int getWifi() {
-		return Wifi;
+		return wifi;
 	}
 	public void setWifi(int wifi) {
-		Wifi = wifi;
+		this.wifi = wifi;
 	}
 	public int getNavigation() {
-		return Navigation;
+		return navigation;
 	}
 	public void setNavigation(int navigation) {
-		Navigation = navigation;
+		this.navigation = navigation;
 	}
 	public int getBabySheet() {
-		return BabySheet;
+		return babySheet;
 	}
 	public void setBabySheet(int babySheet) {
-		BabySheet = babySheet;
+		this.babySheet = babySheet;
 	}
+	
+	
 	
 	
 	

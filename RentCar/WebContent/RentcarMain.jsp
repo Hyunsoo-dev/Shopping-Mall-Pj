@@ -33,7 +33,7 @@
 			<td><jsp:include page="Top.jsp" /></td>
 		</tr>
 		<!--  center page 부분 -->
-		<tr height = "450">
+		<tr>
 			<td><jsp:include page= "<%= center %>" /></td>
 		</tr>
 		<!--  Bottom page 부분 -->
