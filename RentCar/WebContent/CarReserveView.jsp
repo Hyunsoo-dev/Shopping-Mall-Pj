@@ -87,8 +87,8 @@
 				<td width = "90"><%=cbean.getNavigation() %></td>
 				<td width = "90"><%=cbean.getBabySheet() %></td>
 				<td width = "100"><%=cbean.getCompany() %></td>
-				<td width = "75"><input type = "button" value = "삭제" location.href="RentcarMain.jsp?center=CarDelete.jsp"></td>
-			</tr>
+				<td width = "75"><input type = "button" value = "삭제" onclick ="location.href='CarDelete.jsp?no=<%= cbean.getNo()%>'"></td>
+			</tr>	
 		<%
 			}
 		%>	

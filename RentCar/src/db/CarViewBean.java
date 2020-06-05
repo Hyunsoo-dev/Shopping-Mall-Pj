@@ -1,7 +1,9 @@
 package db;
 
 public class CarViewBean {
-
+	
+	private int no;
+		
 	private String img;
 	
 	private String name;
@@ -25,6 +27,16 @@ public class CarViewBean {
 	private int BabySheet;
 	
 	private String Company;
+	
+	
+
+	public int getNo() {
+		return no;
+	}
+
+	public void setNo(int no) {
+		this.no = no;
+	}
 
 	public String getImg() {
 		return img;

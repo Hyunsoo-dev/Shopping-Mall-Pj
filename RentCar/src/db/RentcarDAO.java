@@ -263,8 +263,8 @@ Vector<CarListBean> v = new Vector<CarListBean>();
 		
 		try {
 			
-			String sql =  "select a2.img,  a2.name, a1.quantity , a2.price , a1.rentduration , a1.rentdate, a2.usepeople, a1.insurance, a1.Wifi, a1.Navigation, a1.BabySheet, a2.company"
-						+ " from carreserve a1 , rentcar a2 "
+			String sql =  "select a2.img,  a2.name, a1.quantity , a2.price , a1.rentduration , a1.rentdate, a2.usepeople, a1.insurance, a1.Wifi, a1.Navigation, a1.BabySheet, a2.company , a1.no"
+						+ " from carreserve a1 , rentcar a2 "	
 						+ "where sysdate < to_date(rentdate , 'yyyy-MM-dd') and a1.no = a2.no and id = ?";
 			
 			pstmt = con.prepareStatement(sql);
@@ -286,7 +286,7 @@ Vector<CarListBean> v = new Vector<CarListBean>();
 				cbean.setNavigation(rs.getInt(10));
 				cbean.setBabySheet(rs.getInt(11));
 				cbean.setCompany(rs.getString(12));
-				
+				cbean.setNo(rs.getInt(13));
 				v.add(cbean);
 				
 			}
@@ -297,6 +297,31 @@ Vector<CarListBean> v = new Vector<CarListBean>();
 	
 		
 		return v;
+	}
+	
+	//예약 목록을 삭제하는 메소드 
+	public void carReserveDelete(int no) {
+		int result = 0;
+		getCon();
+		
+		try {
+			
+			String sql = "delete from carreserve where no = ?";
+			
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, no);
+			
+			pstmt.executeUpdate();
+			
+			
+			
+			con.close();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
 	}
 }
  
