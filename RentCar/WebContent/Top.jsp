@@ -72,7 +72,7 @@
 		<tr height = "50">
 			<td class = "top_menu" width = "200" ><a href = "RentcarMain.jsp?center=CarReserveMain.jsp">예 약 하 기</a></td>
 			<td class = "top_menu" width = "200" ><a href = "RentcarMain.jsp?center=CarReserveView.jsp" >예 약 확 인</a></td>
-			<td class = "top_menu" width = "200" ><a href = "#" >자 유 게 시 판</a></td>
+			<td class = "top_menu" width = "200" ><a href = "RentcarMain.jsp?center=CarBbs.jsp" >자 유 게 시 판</a></td>
 			<td class = "top_menu" width = "200" ><a href = "#" >이 벤 트</a></td>
 			<td class = "top_menu" width = "200" ><a href = "#" >고 객 센 터</a></td>					
 		</tr>
