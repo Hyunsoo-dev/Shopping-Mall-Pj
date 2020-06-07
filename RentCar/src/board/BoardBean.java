@@ -4,7 +4,7 @@ public class BoardBean {
 
 	
 	private int num;
-	private String writer;
+	private String id;
 	private String email;
 	private String subject;
 	private String password;
@@ -22,11 +22,12 @@ public class BoardBean {
 	public void setNum(int num) {
 		this.num = num;
 	}
-	public String getWriter() {
-		return writer;
+	
+	public String getId() {
+		return id;
 	}
-	public void setWriter(String writer) {
-		this.writer = writer;
+	public void setId(String id) {
+		this.id = id;
 	}
 	public String getEmail() {
 		return email;

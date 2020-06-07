@@ -26,7 +26,7 @@
 	 
 	
 	BoardDAO dbao = new BoardDAO();
-	dbao.boardWrite(id,subject,content, tbean);
+	dbao.writeBoard(id,subject,content, tbean);
 	
 	response.sendRedirect("RentcarMain.jsp?center=CarBbs.jsp");
 %>

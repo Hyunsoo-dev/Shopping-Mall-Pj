@@ -27,7 +27,8 @@
 			alert("로그인에 실패했습니다. 다시 로그인 해주세요.");
 			history.go(-1);
 		</script>
-<%		
+<%
+
 	//로그인 성공 시 
 	}else{
 		session.setAttribute("id", id);

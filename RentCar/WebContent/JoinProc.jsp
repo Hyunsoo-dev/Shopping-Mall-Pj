@@ -30,7 +30,15 @@
 		alert("가입 되었습니다.");
 		location.href="RentcarMain.jsp?center=Login.jsp";
 	</script>
-	
+
+<%
+	}else if(result == 0){
+			
+%>
+	<script>
+		alert("중복된 id 입니다.");
+		location.href="RentcarMain.jsp?center=Join.jsp";
+	</script>
 <%
 	}else{ 
 		

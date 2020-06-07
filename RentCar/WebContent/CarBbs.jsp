@@ -1,5 +1,6 @@
-<%@page import="java.util.Vector"%>
 <%@page import="board.BoardBean"%>
+<%@page import="java.util.Vector"%>
+
 <%@page import="board.BoardDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -49,8 +50,13 @@
 			
 			<td><%= dbean.getNum() %></td>
 			<td><%= dbean.getReg_date() %></td>
-			<td><%= dbean.getWriter() %></td>
-			<td><%= dbean.getContent() %></td>
+			<td><%= dbean.getId() %></td>
+			<td>
+				<a href="RentcarMain.jsp?center=CarBbsInfo.jsp?num=<%= dbean.getNum() %>" style = "text-decoration : none; color : powderblue;">
+					<%= dbean.getSubject() %>
+				</a>
+			</td>
+			
 		</tr>
 <%
 		}

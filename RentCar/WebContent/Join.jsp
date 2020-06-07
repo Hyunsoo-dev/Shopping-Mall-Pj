@@ -1,3 +1,4 @@
+<%@page import="client.ClientDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -14,7 +15,9 @@
 </style>
 </head>
 <body>
-
+<%
+	ClientDAO tdao = new ClientDAO();
+%>
 	
 	<form action="JoinProc.jsp" method = "post">
 		<h2>회원가입</h2>
@@ -24,6 +27,7 @@
 				<td width =" 450">
 					<input type = "text" name = "id" size = "60">
 				</td>
+				
 			</tr>
 			<tr height = "60">
 				<th width = "250">이름</th>

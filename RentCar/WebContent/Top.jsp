@@ -17,6 +17,9 @@
 		text-align: center;
 		
 	}
+	#loginJoin{
+		text-align: right;
+	}
 	
 	/* top page 메뉴 버튼 스타일*/
 	a{  
@@ -51,7 +54,7 @@
 					<img src = "img/amazoncar.png">
 				</a>
 			</td>
-			<td width = "200" align = "center"> 
+			<td id = "loginJoin" width = "400" > 
 			<%= id  %>님
 			<% 
 				//GUEST 로 로그인된 경우 --> 로그인 버튼 생성함.
@@ -59,12 +62,12 @@
 			
 			%>	
 					<button onclick = "location.href='RentcarMain.jsp?center=Login.jsp'">로그인</button>
+					<button onclick = "location.href='RentcarMain.jsp?center=Join.jsp'">회원가입</button>
 			<%
 				}else{
 			%>
 					<button onclick = "location.href='RentcarMain.jsp?center=Logout.jsp'">로그아웃</button>			
 			<%
-					
 				}
 			%>
 			</td>			

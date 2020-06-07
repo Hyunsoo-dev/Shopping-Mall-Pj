@@ -36,7 +36,7 @@ public class BoardDAO {
 	
 	
 	//하나의 게시물 저장하는 메소드
-	public void boardWrite(String id , String subject, String content, ClientBean tbean) {
+	public void writeBoard(String id , String subject, String content, ClientBean tbean) {
 		
 		getCon();
 		
@@ -89,7 +89,7 @@ public class BoardDAO {
 			while(rs.next()) {
 				BoardBean dbean = new BoardBean();
 				dbean.setNum(rs.getInt(1));
-				dbean.setWriter(rs.getString(2));
+				dbean.setId(rs.getString(2));
 				dbean.setEmail(rs.getString(3));
 				dbean.setSubject(rs.getString(4));
 				dbean.setPassword(rs.getString(5));
@@ -112,4 +112,65 @@ public class BoardDAO {
 		return v;
 		
 	}
+	
+	//하나의 게시물을 가져오는 메소드
+	public BoardBean getOneBoard(int num) {
+		
+		BoardBean dbean = null;
+		getCon();
+		try {
+			
+			String countSql = "update carbbs set readCount = readCount + 1 where num = ?";
+			pstmt = con.prepareStatement(countSql);
+			pstmt.setInt(1, num);
+			pstmt.executeUpdate();
+			
+			String sql = "select * from carbbs where num = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, num);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				dbean = new BoardBean();
+				dbean.setNum(rs.getInt(1));
+				dbean.setId(rs.getString(2));
+				dbean.setEmail(rs.getString(3));
+				dbean.setSubject(rs.getString(4));
+				dbean.setPassword(rs.getString(5));
+				dbean.setReg_date(rs.getDate(6).toString());
+				dbean.setRef(rs.getInt(7));
+				dbean.setRe_step(rs.getInt(8));
+				dbean.setRe_level(rs.getInt(9));
+				dbean.setReadcount(rs.getInt(10));
+				dbean.setContent(rs.getString(11));
+						
+			}
+			con.close();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return dbean;
+	}
+	
+	public int updateBoard(int num , String subject , String content) {
+		int result = 0;
+		getCon();
+		try {
+			
+			String sql = "update carbbs set subject = ? , content = ? where num = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, subject);
+			pstmt.setString(2, content);
+			pstmt.setInt(3, num);
+			result = pstmt.executeUpdate();
+			
+			con.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
 }

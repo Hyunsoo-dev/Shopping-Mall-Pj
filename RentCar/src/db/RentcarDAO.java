@@ -207,13 +207,20 @@ Vector<CarListBean> v = new Vector<CarListBean>();
 		int result = 0;
 		getCon();
 		try {
+//비밀번호가 맞는지 확인하는 메소드 호출
 			
-			String sql = "select count(*) from member where id = ? and pass1 = ?";
+			
+			String sql = "select count(*) from client where id = ? and password = ?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, id);
 			pstmt.setString(2, pass);
 			
-			result = pstmt.executeUpdate();
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				if(rs.getInt(1) > 0) {
+					result = 1;
+				}
+			}
 			
 			con.close();
 		} catch (Exception e) {
@@ -222,6 +229,8 @@ Vector<CarListBean> v = new Vector<CarListBean>();
 		
 		return result;
 	}
+	
+	
 	
 	
 	//차량 예약하기를 눌렀을 때 DB에 데이터들을 저장하는 메소드
@@ -301,7 +310,7 @@ Vector<CarListBean> v = new Vector<CarListBean>();
 	
 	//예약 목록을 삭제하는 메소드 
 	public void carReserveDelete(int no) {
-		int result = 0;
+		
 		getCon();
 		
 		try {

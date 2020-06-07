@@ -32,15 +32,21 @@ public class ClientDAO {
 		
 	}
 	
+	
+	
 	//회원가입 메소드 
 	public int ClientJoin(ClientBean tbean) {
 		int result = 0;
 		
+		if(checkId(tbean) == 0) {//중복인 경우
+			result = 0;
+			return result;
+		}
+		
 		getCon();
 		
-		try {
-			
-			
+		try {	
+				
 				String sql = "insert into client values (?,?,?,?)";
 				pstmt = con.prepareStatement(sql);
 				pstmt.setString(1, tbean.getId());
@@ -91,4 +97,36 @@ public class ClientDAO {
 		
 	}
 
+	
+	//회원가입 시 중복된 아이디 체크 
+	public int checkId(ClientBean tbean) {
+		
+		int result = 0;
+		
+		getCon();
+		
+		try {
+			
+			while(true) {
+				//중복된 아이디 인지 체크
+				
+				String sql = "select * from client where id = ?";
+				pstmt = con.prepareStatement(sql);
+				pstmt.setString(1, tbean.getId());
+				rs = pstmt.executeQuery();
+				
+				if(rs.next()){
+					result = 0;//중복
+					
+				}else 
+					result = 1;
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+			return result;
+	}
+	
+	
 }
