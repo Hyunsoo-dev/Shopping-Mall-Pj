@@ -72,7 +72,7 @@
 		<tr height = "40">
 			
 			<td colspan = "4" align = "right">
-			<button  onclick ="location.href='RentcarMain.jsp?center=CarBbsWrite.jsp'">글쓰기</button>
+			<button  onclick ="location.href='RentcarMain.jsp?center=CarBbsWrite.jsp'">질문 올리기</button>
 			</td>
 		</tr>
 	</table>

@@ -153,6 +153,7 @@ public class BoardDAO {
 		return dbean;
 	}
 	
+	//게시물을 수정하는 메소드
 	public int updateBoard(int num , String subject , String content) {
 		int result = 0;
 		getCon();
