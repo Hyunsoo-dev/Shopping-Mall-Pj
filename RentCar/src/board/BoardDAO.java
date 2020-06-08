@@ -173,4 +173,25 @@ public class BoardDAO {
 		return result;
 	}
 	
+	//게시글 삭제하는 메소드 
+	public int deleteBoard(int num) {
+		
+		int result = 0;
+		getCon();
+		
+		try {
+			
+			String sql = "delete from carbbs where num = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, num);
+			result = pstmt.executeUpdate();
+			
+			con.close();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
 }
