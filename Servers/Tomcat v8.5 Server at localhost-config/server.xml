@@ -156,7 +156,7 @@
       <Context docBase="RentCar" path="/RentCar" reloadable="true" source="org.eclipse.jst.jee.server:RentCar">
       	<Resource auth="Container" driverClassName="oracle.jdbc.driver.OracleDriver" loginTimeout="10" maxWait="5000" name="jdbc/pool" password="1234" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521:xe" username="system"/>
       </Context>
-      <Context docBase="Board" path="/Board" reloadable="true" source="org.eclipse.jst.jee.server:Board"/></Host>
+      <Context docBase="Board" path="/Board" reloadable="true" source="org.eclipse.jst.jee.server:Board"/><Context docBase="team" path="/team" reloadable="true" source="org.eclipse.jst.jee.server:team"/></Host>
     </Engine>
   </Service>
 </Server>

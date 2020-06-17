@@ -41,9 +41,14 @@
 			<td width ="300">제목</td>
 			<td width ="600"><%=dbean.getSubject() %></td>
 		</tr>
-		<tr height = "40">
+		<tr height = "150">
 			<td width ="300">글 내용</td>
-			<td width ="600"><%= dbean.getContent() %></td>
+			<td width ="600">
+			
+				<%= dbean.getContent() %>"
+			
+				
+			</td>
 		</tr>
 		<tr height = "40">
 			<td colspan = "2">

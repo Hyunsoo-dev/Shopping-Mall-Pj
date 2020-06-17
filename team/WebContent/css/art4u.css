@@ -1,0 +1,80 @@
+/*��ü ���� ��Ÿ�� ����*/
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url('https://fonts.googleapis.com/css?family=Gothic+A1:200,700,800')
+*{
+	font-family:'Nanum Gothic';
+}
+a {
+	color:#000000;
+	text-decoration: none;
+	
+}
+a:hover{
+	color:#bbbbbb;
+	text-decoration: none;
+	cursor:pointer;
+	
+}
+/*�׺���̼� ���� ���� */
+.navbar-default{ 
+	background-color:#ffffff;
+	border-color :#000000;
+}
+/*.navbar-default .navbar-brand{
+	background-color:#0388FD;
+	
+} �׺���̼� ���� ����*/ 
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus{
+	/*background-color : transparent;
+	color: #0388FD; Ŀ���� ���� �ø��� �Ķ������� ��ȯ */
+	/*text-decoration:underline;
+	color :#0388FD;Ŀ���� ���� �ø��� ������ ���� */
+	
+}
+.navbar-default .navbar-nav >.active > a,
+.navbar-default .navbar-nav >.active >a:hover,
+.navbar-default .navbar-nav >.active >a:focus{/*���� ���õ� ������̼� ���� �̺�Ʈ*/
+	color :white;
+	background-color : white; 
+	/*background-color : #0388FD;*/
+	content: '';
+	width: 100%;
+ 	border-bottom: 2px solid #0388FD;
+}
+
+.navbar-default .navbar-nav >li >a:hover,
+.navbar-default .navbar-nav >li >a:focus{/*������̼��� ���ڿ� ���콺�� �÷��� ��*/
+color : black;
+
+}
+.navbar-default .navbar-nav >.open >a,
+.navbar-default .navbar-nav >.open >a:hover,
+.navbar-default .navbar-nav >.open >a:focus{/*���� ���õ� ������̼� ���� �̺�Ʈ*/
+	/*color : white;
+	background-color : #0388FD;
+	text-decoration: none;*/
+	content: '';
+	width: 100%;
+ 	border-bottom: 2px solid #0388FD;
+}
+
+
+
+/*.navbar-default .navbar-nav >li>a{ �׺���̼� �⺻ ���� 
+	color:white;
+}*/
+
+
+
+@media (max-width : 767px){/*�ػ󵵰� ���� �� ����ٿ� �����ۿ� ���콺�� �÷��� ��*/
+	.navbar-default .navbar-nav .open .dropdown-menu >li>a{
+	 color : #000000;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu >li>a:hover,
+	.navbar-default .navbar-nav .open .dropdown-menu >li>a:focus{
+	 color :#0388FD;
+	}
+	
+}
