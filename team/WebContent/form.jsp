@@ -46,10 +46,10 @@
           <h1 class="mb-5">WATCHA</h1>
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          <form action = "MovieList.jsp" action = "post">
+          <form action = "MovieList.jsp" method ="post">
             <div class="form-row">
               <div class="col-12 col-md-9 mb-2 mb-md-0">
-                <input type="text" name = "movieName" class="form-control form-control-lg" placeholder="작품 제목, 배우, 감독을 검색해 보세요." >
+                <input type="text" name="movieName" class="form-control form-control-lg" placeholder="작품 제목, 배우, 감독을 검색해 보세요." >
               </div>
               <div class="col-12 col-md-3">
                 <button type="submit" class="btn btn-block btn-lg btn-primary">검색</button>
