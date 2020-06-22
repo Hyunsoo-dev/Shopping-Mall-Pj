@@ -106,7 +106,7 @@
 		
 				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 				<td>
-					<a href ="#?movieName=<%=movieName%>">
+					<a href ="bbs.jsp?movieName=<%=movieName%>">
 						<img src = "img/<%= ebean.getImg()%>" height ="80" width = "100"><br>
 					</a>
 				</td>

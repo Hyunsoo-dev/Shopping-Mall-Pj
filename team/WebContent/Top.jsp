@@ -34,6 +34,20 @@
   <nav class="navbar navbar-light bg-light static-top">
     <div class="container">
       <a class="navbar-brand" href="form.jsp">WATCHA</a>
+      
+      	
+    	 <form action = "MovieList.jsp" method ="post">
+            <div class="form-row">
+              <div class="col-12 col-md-8">
+                <input type="text" name="movieName" class="form-control">
+              </div>
+              <div class="col-12 col-md-4">
+                <button type="submit" class="btn btn-primary">°Ë»ö</button>
+              </div>
+            </div>
+          </form>
+      
+      
       <a class="btn btn-primary" href="#">Sign In</a>
     </div>
   </nav>
