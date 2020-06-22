@@ -59,7 +59,7 @@
 		
 				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 				<td class = "text-info">
-					<a href ="bbs.jsp?movieName=<%=movieName%>">
+					<a href ="bbs.jsp?movieName=<%=movieName%>"><!-- bbs.jsp로 영화 이름 넘기기 -->
 						<img src = "img/<%= ebean.getImg()%>" height ="200" width = "140">	<br>
 					</a>	
 						
